@@ -51,10 +51,3 @@ require("lazy").setup({
     },
   },
 })
-
--- 確保停止所有 LSP 服務
--- vim.api.nvim_create_autocmd("VimEnter", {
---   callback = function()
---     vim.lsp.stop_client(vim.lsp.get_active_clients())
---   end,
--- })

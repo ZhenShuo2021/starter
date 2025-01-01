@@ -1,24 +1,12 @@
--- onedark theme
--- return {
---   "navarasu/onedark.nvim",
---   config = function()
---     require("onedark").setup {
---       style = "darker",
---     }
---     vim.cmd [[colorscheme onedark]]
---   end,
--- }
-
--- vscode theme
 return {
   -- 禁用 LSP 相關插件
-  { "neovim/nvim-lspconfig", enabled = false },
-  { "williamboman/mason.nvim", enabled = false },
-  { "williamboman/mason-lspconfig.nvim", enabled = false },
-  { "folke/neodev.nvim", enabled = false },
+  { "neovim/nvim-lspconfig", import = false },
+  { "williamboman/mason.nvim", import = false },
+  { "williamboman/mason-lspconfig.nvim", import = false },
+  { "folke/neodev.nvim", import = false },
 
   -- 關閉動畫
-  { "echasnovski/mini.animate", enabled = false },
+  { "echasnovski/mini.animate", import = false },
   { "folke/snacks.nvim",
     opts = {
       scroll = { enabled = false },
