@@ -12,8 +12,8 @@ map("n", "<c-d>", '"_dd', opts)
 -- 視覺模式下使用黑洞模式刪除
 map("v", "<C-d>", '"_d', opts)
 
--- 對調 `i` 和 `a`
-map({'n', 'v'}, 'i', 'a', { noremap = true, silent = true })
+-- 插入模式
+map({'n', 'v'}, 's', 'a', { noremap = true, silent = true })
 map({'n', 'v'}, 'a', 'i', { noremap = true, silent = true })
 
 local function smart_home()
