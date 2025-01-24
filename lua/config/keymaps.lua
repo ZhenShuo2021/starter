@@ -5,12 +5,16 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- 正常模式下設定捲動行數
+map("n", "<C-f>", "10j", opts) -- 往下捲動 10 行
+map("n", "<C-b>", "10k", opts) -- 往上捲動 10 行
+
 -- 在 vscode 中的 neovim 為獨立設定需要額外設定一次
 -- 正常模式下使用黑洞模式刪除
-map("n", "<c-d>", '"_dd', opts)
+map("n", "<c-d>", '"_dd', { noremap = true, silent = true })
 
 -- 視覺模式下使用黑洞模式刪除
-map("v", "<C-d>", '"_d', opts)
+map("v", "<C-d>", '"_d', { noremap = true, silent = true })
 
 -- 插入模式
 map({'n', 'v'}, 's', 'a', { noremap = true, silent = true })
