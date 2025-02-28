@@ -20,6 +20,9 @@ map("v", "<C-d>", '"_d', { noremap = true, silent = true })
 map({'n', 'v'}, 's', 'a', { noremap = true, silent = true })
 map({'n', 'v'}, 'a', 'i', { noremap = true, silent = true })
 
+-- neo-tree
+-- map("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "Toggle Neo-tree" })
+
 local function smart_home()
   local line = vim.api.nvim_get_current_line()
   local col = vim.api.nvim_win_get_cursor(0)[2]

@@ -5,6 +5,9 @@ return {
   -- { "williamboman/mason-lspconfig.nvim", enabled = false },
   -- { "folke/neodev.nvim", enabled = false },
 
+  -- 使用內建的 snacks explorer
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
+
   -- 關閉動畫
   { "echasnovski/mini.animate", enabled = false },
   { "folke/snacks.nvim",
